@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --ink: #111111;
+    --muted: #666666;
+    --line: #e8e8e8;
+    --soft: #f6f6f4;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--white);
+    color: var(--ink);
+    font-family: 'DM Sans', Arial, sans-serif;
+    line-height: 1.7;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 78px;
+    padding: 0 max(6vw, 24px);
+    border-bottom: 1px solid var(--line);
+    background: var(--white);
+}
+
+.brand {
+    color: var(--ink);
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    text-decoration: none;
+}
+
+.brand span {
+    margin-left: 5px;
+    font-size: 17px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a,
+.footer-links a {
+    color: #555555;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.nav a:hover,
+.nav a.active,
+.footer-links a:hover {
+    color: var(--ink);
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: none;
+    font-size: 23px;
+}
+
+.hero {
+    display: flex;
+    min-height: 530px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 110px max(9vw, 28px) 85px;
+    background: linear-gradient(135deg, #ffffff 65%, #f7f7f5);
+}
+
+.eyebrow {
+    color: #777777;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero h1,
+.document h1 {
+    max-width: 850px;
+    margin: 22px 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(42px, 7vw, 76px);
+    font-weight: 800;
+    letter-spacing: -3.5px;
+    line-height: 1.08;
+}
+
+.hero h1 span,
+.document h1 span {
+    color: #777777;
+}
+
+.lead {
+    max-width: 650px;
+    color: #626262;
+    font-size: 18px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 35px;
+    margin-top: 25px;
+    padding: 14px 20px;
+    background: var(--ink);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-note {
+    width: 100%;
+    margin-top: 75px;
+    padding-top: 16px;
+    border-top: 1px solid #dddddd;
+    color: #777777;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.section {
+    padding: 85px max(9vw, 28px);
+}
+
+.section-heading {
+    max-width: 600px;
+    margin-bottom: 35px;
+}
+
+.section h2,
+.statement h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    min-height: 220px;
+    padding: 27px;
+    border: 1px solid var(--line);
+}
+
+.number {
+    color: #888888;
+    font-size: 11px;
+}
+
+.card h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.card p,
+.section p {
+    color: var(--muted);
+}
+
+.statement {
+    padding: 75px max(9vw, 28px);
+    background: var(--ink);
+    color: var(--white);
+}
+
+.statement .eyebrow,
+.statement p {
+    color: #aaaaaa;
+}
+
+.statement h2 {
+    max-width: 700px;
+}
+
+.legal-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.link-list {
+    align-self: center;
+}
+
+.link-list a {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer {
+    padding: 45px max(6vw, 24px);
+    border-top: 1px solid var(--line);
+}
+
+.footer p,
+.footer small {
+    color: #777777;
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 22px 0;
+}
+
+.document {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 90px 28px 110px;
+}
+
+.document h1 {
+    font-size: clamp(40px, 6vw, 64px);
+}
+
+.document section {
+    margin-top: 48px;
+}
+
+.document h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.document p,
+.document li {
+    color: #555555;
+}
+
+.document a {
+    color: var(--ink);
+    text-underline-offset: 3px;
+}
+
+.document blockquote {
+    margin: 20px 0;
+    padding: 18px 24px;
+    border-left: 3px solid var(--ink);
+    background: var(--soft);
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.meta {
+    color: #888888;
+    font-size: 12px;
+}
+
+.notice {
+    margin-top: 55px;
+    padding: 18px 20px;
+    border-left: 3px solid #aaaaaa;
+    background: var(--soft);
+    color: #555555;
+    font-size: 13px;
+}
+
+.legal {
+    max-width: 820px;
+}
+
+.legal section {
+    margin-top: 34px;
+}
+
+.legal section h2 {
+    font-size: 19px;
+}
+
+.legal section p {
+    margin: 10px 0;
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        height: 68px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        top: 68px;
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px 26px;
+        border-bottom: 1px solid var(--line);
+        background: var(--white);
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding-top: 75px;
+    }
+
+    .hero h1,
+    .document h1 {
+        letter-spacing: -2px;
+    }
+
+    .cards,
+    .legal-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .legal-preview {
+        gap: 25px;
+    }
+
+    .document {
+        padding-top: 65px;
+    }
+
+    .footer-links {
+        gap: 14px 20px;
+    }
+}
